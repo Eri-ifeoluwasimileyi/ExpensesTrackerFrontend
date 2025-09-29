@@ -1,0 +1,227 @@
+/* General */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f6fa;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+/* Layout */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #34495e;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.sidebar button:hover {
+    background: #1abc9c;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f6fa, #eaf1f7);
+}
+
+/* Card */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 520px;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+/* Inputs */
+.card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.card input:focus {
+    border-color: #1abc9c;
+    outline: none;
+}
+
+/* Buttons */
+.card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #1abc9c;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.card button:hover {
+    background: #16a085;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Expenses List */
+#expensesList div {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#expensesList div:hover {
+    background: #ecf0f1;
+}
+
+/* Search */
+#expenseSearch {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    max-width: 500px;
+}
+
+#expenseSearch input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Action Box */
+.action-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.action-box p {
+    margin: 0;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.action-buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.action-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#updateBtn {
+    background-color: #3498db;
+    color: white;
+}
+
+#deleteBtn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.action-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Notifications */
+#notifyBox {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notify {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+}
+
+.notify.success {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.notify.error {
+    background: #e74c3c;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
