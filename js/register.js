@@ -1,3 +1,4 @@
+const API_BASE = "http://127.0.0.1:5000"
 const registerForm = document.getElementById("registerForm");
 
 registerForm.addEventListener("submit", async (onsubmit) => {
@@ -9,7 +10,7 @@ registerForm.addEventListener("submit", async (onsubmit) => {
     const password = document.getElementById("password").value;
 
     try {
-        const res = await fetch("http://127.0.0.1:5000/user/register", {
+        const res = await fetch(`${API_BASE}/user/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ first_name, last_name, email, password})

@@ -1,22 +1,19 @@
-/* General */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #f5f6fa;
     margin: 0;
     padding: 0;
-    color: #2c3e50;
+    color: #0b0c0c;
 }
 
-/* Layout */
 .dashboard-wrapper {
     display: flex;
     min-height: 100vh;
 }
 
-/* Sidebar */
 .sidebar {
     width: 240px;
-    background: #2c3e50;
+    background: #19191a;
     color: #fff;
     padding: 20px;
 }
@@ -40,7 +37,7 @@ body {
     width: 100%;
     padding: 12px;
     border: none;
-    background: #34495e;
+    background: #383636;
     color: #fff;
     border-radius: 6px;
     cursor: pointer;
@@ -49,33 +46,30 @@ body {
 }
 
 .sidebar button:hover {
-    background: #1abc9c;
+    background: #757979;
 }
 
-/* Main Content */
 .main-content {
     flex: 1;
     padding: 30px;
     background: linear-gradient(135deg, #f5f6fa, #eaf1f7);
 }
 
-/* Card */
 .card {
     background: #fff;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     max-width: 520px;
 }
 
 .card h2 {
     margin-top: 0;
     font-size: 18px;
-    color: #2c3e50;
+    color: #111213;
 }
 
-/* Inputs */
 .card input {
     width: 100%;
     padding: 12px;
@@ -86,16 +80,15 @@ body {
 }
 
 .card input:focus {
-    border-color: #1abc9c;
+    border-color: #212423;
     outline: none;
 }
 
-/* Buttons */
 .card button {
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
-    background: #1abc9c;
+    background: #151616;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
@@ -103,15 +96,13 @@ body {
 }
 
 .card button:hover {
-    background: #16a085;
+    background: #747975;
 }
 
-/* Hidden Class */
 .hidden {
     display: none;
 }
 
-/* Expenses List */
 #expensesList div {
     background: #f9f9f9;
     padding: 10px;
@@ -126,7 +117,6 @@ body {
     background: #ecf0f1;
 }
 
-/* Search */
 #expenseSearch {
     display: flex;
     gap: 10px;
@@ -141,7 +131,6 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Action Box */
 .action-box {
     margin-top: 1rem;
     padding: 1rem;
@@ -149,13 +138,13 @@ body {
     background: #fff;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .action-box p {
     margin: 0;
     font-weight: bold;
-    color: #2c3e50;
+    color: #232425;
 }
 
 .action-buttons {
@@ -174,7 +163,7 @@ body {
 }
 
 #updateBtn {
-    background-color: #3498db;
+    background-color: #1f4872;
     color: white;
 }
 
@@ -187,7 +176,6 @@ body {
     opacity: 0.8;
 }
 
-/* Notifications */
 #notifyBox {
     position: fixed;
     top: 20px;
@@ -202,26 +190,61 @@ body {
     padding: 12px 20px;
     border-radius: 6px;
     font-weight: bold;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease, fadeOut 0.3s ease 2.7s;
 }
 
 .notify.success {
-    background: #2ecc71;
+    background: #141615;
     color: #fff;
 }
 
 .notify.error {
-    background: #e74c3c;
+    background: #ff4a36;
     color: #fff;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+#balanceBox {
+    position: absolute;
+    /* upper right corner of the content container */
+    top: 15px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    /* small rounded corners */
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-@keyframes fadeOut {
-    from { opacity: 1; transform: translateY(0); }
-    to { opacity: 0; transform: translateY(-10px); }
+.balance-box {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+#balanceBox button {
+    background: #3f4852;
+    border: none;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+#balanceBox button:hover {
+    background: #878a8d;
 }
